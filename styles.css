@@ -10,27 +10,30 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 body {
+    
     background: -o-linear-gradient(
         90deg,
-        rgba(144,120,34,1) 25px,
-        rgba(143,110,30,1) 73%,
+        rgb(61, 52, 18) 25px,
+        rgb(105, 74, 3) 73%,
 
     );
 
-    background-color: rgb(247, 247, 242);
+    background-color: rgb(245, 245, 239);
 
 }
 
 header {
 
-    background-image: url(images/fondo3.jpg);
+    background-image: url(images/fondo5.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 30vh;
+    flex-direction: column;
+    min-height: 70px;
     display: flexbox;
     align-items: center;
 
@@ -52,15 +55,16 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    flex-direction: column;
     
 }
 
 .menu .logo {
 
-    font-weight: 800;
+    font-weight: 700;
     justify-content: space-between;
     font-size: 25px;
-    color: rgb(249, 250, 251);
+    color: rgb(202, 4, 4);
     text-transform: uppercase;
 }
 
@@ -68,6 +72,8 @@ header {
 
     position: relative;
     float: left;
+    flex-direction: column;
+
 
 }
 
@@ -77,16 +83,17 @@ header {
     padding: 20px;
     color: azure;
     display: block;
+    flex-direction: column;
 
 }
 
 .menu .navbar ul li a:hover {
 
-    color: rgb(197, 242, 244);
+    color: rgb(236, 236, 236);
 
 }
 
-*menu{
+.menu{
 
     display: none;
 
@@ -94,7 +101,7 @@ header {
 
 .menu-icono {
 
-    width: 25px;
+    width: 30px;
 
 }
 
@@ -150,8 +157,8 @@ header {
 
 .services {
 
-    padding: 10px 0px;.
-    display: flex;
+    padding: 10px 0px;
+    display: inline-flexbox;
     justify-content: space-between;
     text-align: center;
 
@@ -385,10 +392,12 @@ header {
 
     }
 
-    @media(max-width:991px) {
+    @media(max-width: 800px){
 
         .menu {
             padding: 20px;
+            image-rendering: 50px;
+            flex-direction: column;
 
         }
 
@@ -413,114 +422,131 @@ header {
         }
 
         ·menu:checked ~ .navbar {
+            flex-direction: column;
             display: initial;
         }
 
-    }
-
-    .header {
-        height: 0vh;
-        padding: 400px 0px;
-        background-position: center center;
-
-    }
-
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;.
-        padding: 0px 30px;
-
-    }
-
-    .content {
-        padding: 0px;
-    }
-
-    .content h1 {
-        margin-top: 100px;
-        font-size: 45px;
-
-    }
-
-    .content p {
-        margin-top: 0px;
-    }
-
-    .header-content img {
-        width: 150px;
-
-    }
-
-    .services {
-
-        flex-direction: column;
-        padding: 50px 30px 0px 30px;
-    }
-        .service {
-            margin-bottom: 50px;
-        }
-
-        .porfolio {
-            padding: 0px 30px 30px 30px;
-        }
-
-        .porfolios h2 {
-            margin-bottom: 15px;
-        }
-        
-        .porfolio {
+        .header {
             flex-direction: column;
+            height: 0vh;
+            padding: 400px 0px;
+            background-position: center center;
+    
         }
-
-        .porfolio img {
-            display: none;
-        }
-
-        .porfolio-1 {
-            text-align: center;
-            margin: 0px 0px 25px px;
-        }
-
-        .porfolio-2 {
-            text-align: center;
-            margin: 0px 0px 25px px;
-        }
-
-        footer {
-            padding: 0px 30px 30px 30px;
-
-        }
-
-        .info.content {
+    
+        .header-content {
             flex-direction: column;
             text-align: center;
-
-        }
-
-        .info-price {
-            margin: 0px 0px 20px 0px;
-
-        }
-
-        .info-txt {
-            margin: 0px;
-
-        }
-
-        .hr {
-            margin: 25px 0px;
-        }
-
-        .enlaces {
-            flex-direction: column;
             align-items: center;
-
+            padding: 0px 30px;
+    
         }
 
-        .enlaces {
+        .img{
+            width: 50px;
+
+        }
+    
+        .content {
             flex-direction: column;
+            padding: 0px;
         }
+    
+        .content h1 {
+            margin-top: 100px;
+            font-size: 45px;
+    
+        }
+    
+        .content p {
+            margin-top: 0px;
+        }
+    
+        .header-content img {
+            width: 150px;
+    
+        }
+    
+        .services {
+    
+            flex-direction: column;
+            padding: 50px 30px 0px 30px;
+        }
+            .service {
+                margin-bottom: 50px;
+            }
+    
+            .porfolio {
+                padding: 0px 30px 30px 30px;
+            }
+    
+            .porfolios h2 {
+                margin-bottom: 15px;
+            }
+            
+            .porfolio {
+                flex-direction: column;
+            }
+    
+            .porfolio img {
+                flex-direction: column;
+                display: none;
+            }
+    
+            .porfolio-1 {
+                flex-direction: column;
+                text-align: center;
+                margin: 0px 0px 25px px;
+            }
+    
+            .porfolio-2 {
+                flex-direction: column;
+                text-align: center;
+                margin: 0px 0px 25px px;
+            }
+    
+            footer {
+                padding: 0px 30px 30px 30px;
+    
+            }
+    
+            .info.content {
+                flex-direction: column;
+                text-align: center;
+    
+            }
+    
+            .info-price {
+                margin: 0px 0px 20px 0px;
+    
+            }
+    
+            .info-txt {
+                margin: 0px;
+    
+            }
+    
+            .hr {
+                margin: 25px 0px;
+            }
+    
+            .enlaces {
+                flex-direction: column;
+                align-items: center;
+                image-resolution: initial;
+                
+            
+    
+            }
+    
+            .enlaces {
+                flex-direction: column;
+            }
+    
 
+
+    }
+
+   
 
         
